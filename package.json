@@ -1,0 +1,22 @@
+{
+  "name": "scanner",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-barcode-reader": "^0.0.2",
+    "react-dom": "^18.0.0",
+    "react-qr-barcode-scanner": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "vite": "^2.9.2"
+  }
+}
