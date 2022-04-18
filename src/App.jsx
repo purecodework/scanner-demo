@@ -6,9 +6,9 @@ function App() {
   const [value, setValue] = useState(0);
   const [err, setError] = useState("");
   const [torch, setTorch] = useState(false);
-  const handleUpdate = (err, res) => {
-    res ? setValue(res.text) : setError(err);
-  };
+  // const handleUpdate = (err, res) => {
+  //   res ? setValue(res.text) : setError(err);
+  // };
 
   return (
     <div className="App h-screen w-screen flex justify-center items-center bg-slate-300">
@@ -17,7 +17,10 @@ function App() {
           <BarcodeScannerComponent
             width={500}
             height={500}
-            onUpdate={(err, result) => handleUpdate}
+            onUpdate={(err, result) => {
+              if (result) setData(result.text);
+              else setData("Not Found");
+            }}
             torch={torch}
           />
         </div>
